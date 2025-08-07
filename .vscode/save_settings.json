@@ -16,14 +16,14 @@
     {
         "text": "HACK:",
         "color": "#000",
-        "isWholeLine": false,
+        "isWholeLine": false
     },
     {
         "text": "TODO:",
         "color": "red",
         "border": "1px solid red",
         "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-        "backgroundColor": "rgba(0,0,0,.2)",
+        "backgroundColor": "rgba(0,0,0,.2)"
         //other styling properties goes here ... 
     }
 ],
@@ -35,7 +35,7 @@
     "cursor": "pointer",
     "border": "1px solid #eee",
     "borderRadius": "2px",
-    "isWholeLine": true,
+    "isWholeLine": true
     //other styling properties goes here ... 
 },
 "todohighlight.include": [
