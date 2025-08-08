@@ -1,4 +1,8 @@
 # Useful link for ths project
-
+<!-- keep the format -->
+- YT Vid VSCodium / VSCode & GitHub Setup [![alt text][1]](https://www.youtube.com/watch?v=m3gLbNMdkV8 )
 - How to Profile Rust Applications in 2025: Tools, Techniques, and Best Practices
-- cargo-tarpaulin TODO: Missing Link
+- cargo-tarpaulin FIXME: Missing Link
+<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
+[1]: ./img/link_symbol.svg
+<!-- keep the format -->
