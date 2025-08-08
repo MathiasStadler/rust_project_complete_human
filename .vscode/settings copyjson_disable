@@ -2,32 +2,20 @@
     "cSpell.words": [
         "Falsches",
         "schroot"
-   ],
-   "todo-tree.highlights.enabled": true,
-   "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "NOTE",
-    "COMMENT",
-    "[ ]",
-    "[x]"
-],
-"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
-"todo-tree.highlights.defaultHighlight": {
+    ],
+    "todo-tree.highlights.defaultHighlight": {
     "icon": "alert",
     "type": "text-and-comment",
     "foreground": "#000000",
     "background": "#FFFFFF",
     "opacity": 50,
-    "iconColour": "#15ff00",
+    "iconColour": "#0000ff",
     "gutterIcon": true,
 },
 "todo-tree.highlights.customHighlight": {
     "TODO": {
         "icon": "check",
-        "foreground": "#FFFFFF",
+        "foreground": "#000000",
         "background": "#FFFFFF",
         "iconColour": "#FFFFFF",
     },
@@ -44,28 +32,39 @@
         "iconColour": "#888888",
     },
     "FIXME": {
-        "foreground": "#FFFFFF",
-        "background": "#fbff00",
-        "iconColour": "#fbff00",
+        "foreground": "#000000",
+        "background": "#ffff00",
+        "iconColour": "#ffff00",
     },
     "BUG": {
-        "foreground": "#FFFFFF",
-        "background": "#FF0000",
-        "iconColour": "#FF0000",
+        "foreground": "#000000",
+        "background": "#ef4444",
+        "iconColour": "#ef4444",
     },
     "[ ]": {
         "icon": "check",
-        "foreground": "#FFFFFF",
-        "background": "#FF0000",
-        "iconColour": "#FF0000",
+        "foreground": "#000000",
+        "background": "#FFFFFF",
+        "iconColour": "#FFFFFF",
     },
     "[x]": {
         "icon": "check",
         "foreground": "#FFFFFF",
-        "background": "#79f108",
-        "iconColour": "#79f108",
+        "background": "#00ff00",
+        "iconColour": "#00ff00",
     }
 },
+"todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "NOTE",
+    "COMMENT",
+    "[ ]",
+    "[x]"
+],
+"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
 }
 // FROM HERE
 // https://thomasventurini.com/articles/the-best-way-to-work-with-todos-in-vscode/

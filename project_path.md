@@ -1,12 +1,13 @@
 # rust project complete human
 
-TODO: Test todod
+TODO: Test todo
 FIXME:
 BUG:
 NOTE:
 HACK:
 [ ]:
 [x]:
+HACK:
 
 <!-- change for test -->
 
