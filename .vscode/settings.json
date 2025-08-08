@@ -1,8 +1,9 @@
 {
     "cSpell.words": [
         "Falsches",
+        "rustup",
         "schroot"
-   ],
+    ],
    "todo-tree.highlights.enabled": true,
    "todo-tree.general.tags": [
     "BUG",

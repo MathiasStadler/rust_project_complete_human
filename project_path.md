@@ -37,20 +37,39 @@ echo $BASH_VERSION
 - ## Create for your own project a new project folder in the console(terminal ,bash shell), e.g. in your own home folder, and open it as a new project inside your program used - in my case MS VSCode / MS VSCodium
 <!-- To comply with the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
+project_name="new_project"
+echo ${project_name} 
 # cd && mkdir <project_name folder> && cd $_
 # command 'cd' change to home folder from logged in user
 # command 'mkdir' create the DIRECTORY(ies), if they do not already exist
 # command `cd` <folder>`change to the folder
 # command '$_' last argument of last command
-cd && mkdir rust-example-cov && cd $_
+cd && mkdir ${project_name} && cd $_
 ```
 <!-- keep the format -->
 >[!TIP]
->Bash Special Variables (\$0,\$?,\$#, \$@, \$\$, \$*, \$-) [![alt text][1]](https://tecadmin.net/bash-special-variables/)
->Another desc [1](https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables)
+><!-- keep the format -->
+>- Bash Special Variables (\$0,\$?,\$#, \$@, \$\$, \$*, \$-) [![alt text][1]](https://tecadmin.net/bash-special-variables/)
+>- Another desc [1](https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables)
+<!-- -->
+## Create a new rust based project inside the previously generated folder and update the rust binary's system wide to the last stable version
 <!-- -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-
+touch README.md \
+&& ln -s README.md README \
+&& cargo init "." \
+&& cargo add rustfmt \
+&& rustup component add rustfmt \
+&& mkdir examples \
+&& cp src/main.rs examples/example.rs \
+&& sed -i -e 's/world/example/g' examples/example.rs \
+&& rustup  show \
+&& rustup  check \
+&& rustup toolchain uninstall stable \
+&& rustup toolchain install stable \
+&& rustup update  --force \
+&& rustup show \
+&& mkdir tests
 ```
 <!-- keep the format -->
 >[!NOTE]
