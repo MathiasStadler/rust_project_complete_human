@@ -87,9 +87,53 @@ else
 echo "NO rust package SYSTEM WIDE installed"
 fi
 # cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
-cargo install --list
+# cargo install --list
 ```
-
+<!-- keep the format -->
+## Install necessary package - Followed this tutorial from web page [![alt text][1]](https://markaicode.com/profiling-applications-2025/)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+# Install perf (on Ubuntu/Debian)
+sudo apt-get install linux-tools-common linux-tools-generic
+<!-- -->
+# [x]: 
+sudo apt install usbip
+# [x]:
+sudo apt install hwdata
+# [x]: 
+sudo apt install usbutils
+# [x]:
+cargo install flamegraph
+```
+<!-- keep the format -->
+## Add more packages depending on the operating system used here [![alt text][1]](https://pkgs.org/download/linux-perf)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+sudo apt install linux-perf
+<!-- keep the format -->
+## Make sure the stable toolchain is activated
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+rustup show
+```
+<!-- keep the format -->
+## Project clean
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo clean # remove everything of target folder of project
+```
+<!-- keep the format -->
+## Project build
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo build
+```
+<!-- keep the format -->
+## Project run
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo run
+```
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
@@ -104,7 +148,7 @@ cargo install --list
     no error if existing, make parent directories as needed,
     with their file modes unaffected by any -m option
 ><!-- -->
->```bash
+>```bash <!-- markdownlint-disable-line code-block-style -->
 ># First make sure that the target directory exists
 >mkdir -p img && curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/refs/heads/main/link_symbol.svg"
 >```
@@ -112,10 +156,41 @@ cargo install --list
 >[!TIP]
 >Add link to files - README.md [![alt text][1]](https://github.com/MathiasStadler/rust_project_complete_human/blob/d45e5b8abe947ca525ce2d29437056dd4775e408/README.md#L1)and project_path.md [![alt text][1]](https://github.com/MathiasStadler/rust_project_complete_human/blob/d45e5b8abe947ca525ce2d29437056dd4775e408/project_path.md#L1)
 ><!-- -->
->```bash
+>```bash <!-- markdownlint-disable-line code-block-style -->
 > bash -c echo "\n\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> \n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
 >```
-<!-- -->
+<!-- keep the format -->
+## rust toolchain [![alt text][1]](https://stackoverflow.com/questions/58226545/how-to-switch-between-rust-toolchains)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+# rust toolchain help - long output
+rustup help toolchain
+# rust toolchain help - the save
+rustup toolchain help
+# Install, uninstall, or list toolchains
+# Usage: rustup[EXE] toolchain <COMMAND>
+# rust toolchain already installed on system
+```
+<!-- keep the format -->
+## rust toolchain - switch
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+rustup override set nightly
+#or
+rustup override set stable
+```
+<!-- keep the format -->
+## rust toolchain - which is active
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+# use show command to show which is active and installed toolchains or profiles
+# see the description
+rustup -v  2>&1 | grep show
+# detect active toolchain
+rustup show
+
+```
+
 >[!TIP]
 >Marker
 <!-- -->
@@ -129,7 +204,7 @@ NOTE:
 <!-- -->
 HACK:
 <!-- -->
-[ ]:
+[ ]:<!-- -->
 <!-- -->
 [x]:
 <!-- -->

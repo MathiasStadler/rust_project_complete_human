@@ -1,8 +1,12 @@
 {
     "cSpell.words": [
         "Falsches",
+        "flamegraph",
+        "hwdata",
         "rustup",
-        "schroot"
+        "schroot",
+        "usbip",
+        "usbutils"
     ],
    "todo-tree.highlights.enabled": true,
    "todo-tree.general.tags": [
