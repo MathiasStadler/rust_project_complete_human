@@ -80,8 +80,11 @@ touch README.md \
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # list all installed crates and write to file with complete command fo uninstall
-if [[ $(cargo install --list| head -c | wc -c) -gt 0 ]]
+if [[ $(cargo install --list| head | wc -c) -gt 0 ]]; then
 cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " |tee /tmp/uninstall.txt
+else
+echo "NO rust package SYSTEM WIDE installed"
+fi
 # cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
 cargo install --list
 ```
