@@ -75,8 +75,9 @@ touch README.md \
 >[!TIP]
 >Show all installed component with version
 >
+<!-- keep the format -->
 >[!TIP]
->Show and delete all installed crates [![alt text][1]]( https://stackoverflow.com/questions/12137431/test-if-a-command-outputs-an-empty-string)
+>Show and delete all installed package [![alt text][1]]( https://stackoverflow.com/questions/12137431/test-if-a-command-outputs-an-empty-string)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # list all installed crates and write to file with complete command fo uninstall
@@ -117,14 +118,23 @@ cargo install --list
 <!-- -->
 >[!TIP]
 >Marker
+<!-- -->
 TODO: Test todo
+<!-- -->
 FIXME:
+<!-- -->
 BUG:
+<!-- -->
 NOTE:
+<!-- -->
 HACK:
+<!-- -->
 [ ]:
+<!-- -->
 [x]:
+<!-- -->
 HACK:
+<!-- -->
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
 <!-- keep the format -->
