@@ -186,7 +186,7 @@ rustup toolchain help
 # rust toolchain already installed on system
 ```
 <!-- keep the format -->
-## rust toolchain - switch
+## rust toolchain - stable to nightly
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 rustup override set nightly
@@ -198,10 +198,12 @@ rustup override set stable
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # use show command to show which is active and installed toolchains or profiles
-# see the description
+# see the description of option rustup show
 rustup -v  2>&1 | grep show
 # detect active toolchain
 rustup show
+# show active toolchain
+rustup show |sed -n '/active toolchain/,/^$/p'
 
 ```
 
