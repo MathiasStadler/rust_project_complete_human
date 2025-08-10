@@ -110,11 +110,25 @@ cargo install flamegraph
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 sudo apt install linux-perf
+```
+<!-- keep the format -->
+## Access to performance monitoring and observability across the operating system
+<!-- keep the format -->
+>[TIP!]
+>How can I set the grep after context to be "until the next blank line"? [![alt text][1]](https://stackoverflow.com/questions/13534306/how-can-i-set-the-grep-after-context-to-be-until-the-next-blank-line)
+>rustup show |sed -n '/active toolchain/,/^$/p'
+<!-- -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>rustup show |sed -n '/active toolchain/,/^$/p'
+>```
+><!-- keep the format -->
 <!-- keep the format -->
 ## Make sure the stable toolchain is activated
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 rustup show
+# or better
+rustup show |sed -n '/active toolchain/,/^$/p'
 ```
 <!-- keep the format -->
 ## Project clean
