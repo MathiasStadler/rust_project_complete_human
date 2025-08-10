@@ -2,9 +2,12 @@
     "cSpell.words": [
         "Falsches",
         "flamegraph",
+        "ftrace",
         "hwdata",
+        "mlock",
         "rustup",
         "schroot",
+        "tracepoint",
         "usbip",
         "usbutils"
     ],

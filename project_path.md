@@ -114,6 +114,20 @@ sudo apt install linux-perf
 <!-- keep the format -->
 ## Access to performance monitoring and observability across the operating system
 <!-- keep the format -->
+- on debian 12.09 **cat /etc/debian_version**
+- More information can be found at 'Perf events and tool security' document: [![alt text][1]](https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html)
+  perf_event_paranoid setting is 3:
+- -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+<!-- -->
+- 0: Disallow raw and ftrace function tracepoint access
+- 1: Disallow CPU event access
+- 2: Disallow kernel profiling
+- 3: perf_event_paranoid setting is 3
+<!-- -->
+- Command to set the prof setting
+sudo sysctl kernel.perf_event_paranoid=0
+<!-- keep the format -->
 >[TIP!]
 >How can I set the grep after context to be "until the next blank line"? [![alt text][1]](https://stackoverflow.com/questions/13534306/how-can-i-set-the-grep-after-context-to-be-until-the-next-blank-line)
 >rustup show |sed -n '/active toolchain/,/^$/p'
@@ -131,7 +145,7 @@ rustup show
 rustup show |sed -n '/active toolchain/,/^$/p'
 ```
 <!-- keep the format -->
-## Project clean
+## Project clean - remove all file inside the target folder
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo clean # remove everything of target folder of project
@@ -149,6 +163,13 @@ cargo build
 cargo run
 ```
 <!-- keep the format -->
+## Project run flamegraph
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+# CARGO_PROFILE_RELEASE_DEBUG=true cargo flamegraph --bin <project_folder>
+CARGO_PROFILE_RELEASE_DEBUG=true cargo flamegraph --bin rust_project_complete_human
+```
+
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
 <!-- -->
