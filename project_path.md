@@ -63,8 +63,8 @@ touch README.md \
 && mkdir examples \
 && cp src/main.rs examples/example.rs \
 && sed -i -e 's/world/example/g' examples/example.rs \
-&& rustup  show \
-&& rustup  check \
+&& rustup show \
+&& rustup check \
 && rustup toolchain uninstall stable \
 && rustup toolchain install stable \
 && rustup update  --force \
@@ -157,6 +157,12 @@ cargo clean # remove everything of target folder of project
 cargo build
 ```
 <!-- keep the format -->
+## Project build --release
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo build --release
+```
+<!-- keep the format -->
 ## Project run
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
@@ -169,7 +175,26 @@ cargo run
 # CARGO_PROFILE_RELEASE_DEBUG=true cargo flamegraph --bin <project_folder>
 CARGO_PROFILE_RELEASE_DEBUG=true cargo flamegraph --bin rust_project_complete_human
 ```
-
+<!-- keep thr format-->
+## Memory Profiling with DHAT
+<!-- kep the format -->
+### Install valgrind with DHAT [![alt text][1]](https://markaicode.com/profiling-applications-2025/)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+# Install valgrind with DHAT
+sudo apt-get install valgrind
+# Install DHAT viewer
+## doesn't work on this os - as specified in the tutorial
+## cargo install dhat-rs
+cargo add  dhat
+```
+<!-- keep the format -->
+### Run program whit DHAT
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+DHAT=yes ./target/release/rust_project_complete_human
+```
+<!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
 <!-- -->
