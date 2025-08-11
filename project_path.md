@@ -32,14 +32,12 @@ echo $BASH_VERSION
 5.2.15(1)-release
 ```
 <!-- keep the format -->
-## Create plain rust format inside terminal
-<!-- keep the format -->
-- ## Create for your own project a new project folder in the console(terminal ,bash shell), e.g. in your own home folder, and open it as a new project inside your program used - in my case MS VSCode / MS VSCodium
+## Create for your own project a new project folder in the console(terminal ,bash shell), e.g. in your own home folder, and open it as a new project inside your program used - in my case MS VSCode / MS VSCodium
 <!-- To comply with the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 project_name="new_project"
 echo ${project_name} 
-# cd && mkdir <project_name folder> && cd $_
+# cd && mkdir <project_name> folder> && cd $_
 # command 'cd' change to home folder from logged in user
 # command 'mkdir' create the DIRECTORY(ies), if they do not already exist
 # command `cd` <folder>`change to the folder
@@ -189,11 +187,51 @@ sudo apt-get install valgrind
 cargo add  dhat
 ```
 <!-- keep the format -->
+>[TIP]
+>Install valgrind on debian 12 [![alt text][1]](https://valgrind.org/downloads/repository.html)
+><!-- keep the format-->
+>- Install
+><!-- keep the format-->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>git clone https://sourceware.org/git/valgrind.git
+>cd valgrind
+>./autogen.sh
+>./configure
+>  make
+>```
+<!-- keep the format-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cd /tmp
+git clone https://sourceware.org/git/valgrind.git && \
+cd valgrind && \
+./autogen.sh && \
+#./configure --prefix=<installation-directory>
+./configure --prefix=/tmp/my_valgrind && \
+make && \
+make install
+```
+><!-- keep the format -->
+<!-- keep the format -->
 ### Run program whit DHAT
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 DHAT=yes ./target/release/rust_project_complete_human
 ```
+<!--keep the format -->
+>[!TIP]
+>How do I recursively grep all directories and subdirectories? [![alt text][1]](https://stackoverflow.com/questions/1987926/how-do-i-recursively-grep-all-directories-and-subdirectories)
+><!-- keep the format-->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>grep -r --include "*.md" if .
+>```
+><!-- keep the format -->
+>- with line number
+>-- flag -n for line number
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>grep -rn --include "*.md" if .
+>```
+><!-- keep the format -->
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)

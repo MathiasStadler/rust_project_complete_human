@@ -6,3 +6,10 @@ edition = "2024"
 [dependencies]
 dhat = "0.3.3"
 rustfmt = "0.10.0"
+
+[profile.release]
+debug = 1
+
+[features]
+dhat-heap = []    # if you are doing heap profiling
+dhat-ad-hoc = []  # if you are doing ad hoc profiling

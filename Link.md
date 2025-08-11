@@ -4,6 +4,8 @@
 - How to Profile Rust Applications in 2025: Tools, Techniques, and Best Practices [![alt text][1]](https://markaicode.com/profiling-applications-2025/)
 - cargo-tarpaulin FIXME: Missing Link
 - rust line profiling [![alt text][1]](https://duckduckgo.com/?q=rust+line+profiling&t=vivaldi&atb=v484-1&ia=web)
+- How To Install valgrind on Ubuntu 22.04[![alt text][1]](https://www.installati.one/install-valgrind-ubuntu-22-04/)
+- Crate dhat [![alt text][1]](https://docs.rs/dhat/latest/dhat/)
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
 <!-- keep the format -->
