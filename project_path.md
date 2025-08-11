@@ -201,12 +201,17 @@ cargo add  dhat
 >```
 <!-- keep the format-->
 ```bash <!-- markdownlint-disable-line code-block-style -->
+# test folder is NOT exits 
+create_folder_file="~/bin_valgrind" && if [[ (-f ${create_folder_file} ) || ( -d ${create_folder_file} ) || (-L ${create_folder_file}) ]]; \
+then echo "folder/file/link ${create_folder_file} exists"; \
+else echo "folder/file/link ${create_folder_file} NOT exists";\
+fi 
 cd /tmp
 git clone https://sourceware.org/git/valgrind.git && \
 cd valgrind && \
 ./autogen.sh && \
 #./configure --prefix=<installation-directory>
-./configure --prefix=/tmp/my_valgrind && \
+./configure --prefix=${create_folder_file} && \
 make && \
 make install
 ```
