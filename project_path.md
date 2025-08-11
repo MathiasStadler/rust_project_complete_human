@@ -187,7 +187,7 @@ sudo apt-get install valgrind
 cargo add  dhat
 ```
 <!-- keep the format -->
->[TIP]
+>[TIP!]
 >Install valgrind on debian 12 [![alt text][1]](https://valgrind.org/downloads/repository.html)
 ><!-- keep the format-->
 >- Install
@@ -231,7 +231,6 @@ incremental = true
 debug = true
 lto = "fat"
 ```
-<!-- keep the format -->
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 DHAT=yes ./target/release/rust_project_complete_human
@@ -296,6 +295,7 @@ rustup override set nightly
 #or
 rustup override set stable
 ```
+FIXME: rustup -v  2>&1 | grep show better command description
 <!-- keep the format -->
 ## rust toolchain - which is active
 <!-- keep the format -->
