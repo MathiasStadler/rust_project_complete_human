@@ -10,6 +10,7 @@
         "rustup",
         "schroot",
         "tracepoint",
+        "trapapa",
         "usbip",
         "usbutils",
         "valgrind"
