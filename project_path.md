@@ -217,7 +217,21 @@ make install
 ```
 ><!-- keep the format -->
 <!-- keep the format -->
-### Run program whit DHAT
+### Run program whit DHAT -follow this tut  [![alt text][1]](https://www.justanotherdot.com/posts/profiling-with-perf-and-dhat-on-rust-code-in-linux.html)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo build --release
+```
+<!--keep the format -->
+### Add/replace  cargo.toml
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+[profile.release]
+incremental = true
+debug = true
+lto = "fat"
+```
+<!-- keep the format -->
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 DHAT=yes ./target/release/rust_project_complete_human

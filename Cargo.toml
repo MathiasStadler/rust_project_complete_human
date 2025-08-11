@@ -7,8 +7,13 @@ edition = "2024"
 dhat = "0.3.3"
 rustfmt = "0.10.0"
 
+# [profile.release]
+# debug = 1
+
 [profile.release]
-debug = 1
+incremental = true
+debug = true
+lto = "fat"
 
 [features]
 dhat-heap = []    # if you are doing heap profiling
