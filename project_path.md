@@ -295,6 +295,9 @@ rustup override set nightly
 #or
 rustup override set stable
 ```
+<!-- keep the format -->
+>[NOTE:]
+> 
 FIXME: rustup -v  2>&1 | grep show better command description
 <!-- keep the format -->
 ## rust toolchain - which is active
