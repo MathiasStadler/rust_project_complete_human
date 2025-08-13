@@ -8,7 +8,14 @@
 - with permanently assigned **--extensions-dir /home/trapapa/codium_one/extensions_one**
 - with Permanently assigned **--user-data-dir /home/trapapa/codium_one**
 - with Permanently assigned **--profile my_one**
-- set log level to **--log debug**
+- set log level to **--log debug** or **--log info** at start
+
+## Logs of codium find your inside
+<!-- keep the format -->
+<!-- markdownlint-disable MD033 -->
+- **# cd <home>/<profile_folder>/logs/<date>**
+-- **cd ~/codium_one/logs**
+**
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $codium --user-data-dir /home/trapapa/codium_one/ --extensions-dir /home/trapapa/codium_one/extensions_one --log debug --profile my_one
@@ -18,7 +25,10 @@ $codium --user-data-dir /home/trapapa/codium_one/ --extensions-dir /home/trapapa
 > How to tail all the log files inside a folder and sub folders
 ><!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-
+# change to log folder e.g.
+$ cd ~/codium_one/logs/20250813T093143
+$ tail -F **/*log
+<output show all log files>
 ```
 <!-- keep the format -->
 ## Start Date of project
