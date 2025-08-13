@@ -1,9 +1,28 @@
 # rust project complete human
 <!-- change for test -->
 ## project path
+
+## start codium
+<!-- keep the format -->
+- installed local system path=> /usr/bin/codium
+- with permanently assigned **--extensions-dir /home/trapapa/codium_one/extensions_one**
+- with Permanently assigned **--user-data-dir /home/trapapa/codium_one**
+- with Permanently assigned **--profile my_one**
+- set log level to **--log debug**
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+$codium --user-data-dir /home/trapapa/codium_one/ --extensions-dir /home/trapapa/codium_one/extensions_one --log debug --profile my_one
+```
+
+>[TIP!]
+> How to tail all the log files inside a folder and sub folders
+><!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+
+```
 <!-- keep the format -->
 ## Start Date of project
-
+<!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $ date
 Fri Jul 25 09:07:19 AM CEST 2025
