@@ -13,9 +13,8 @@
 ## Logs of codium find your inside
 <!-- keep the format -->
 <!-- markdownlint-disable MD033 -->
-- **# cd <home>/<profile_folder>/logs/<date>**
--- **cd ~/codium_one/logs**
-**
+- **#cd ~/codium_one/logs # cd <home>/<profile_folder>/logs/<date>**
+
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $codium --user-data-dir /home/trapapa/codium_one/ --extensions-dir /home/trapapa/codium_one/extensions_one --log debug --profile my_one
@@ -61,7 +60,7 @@ echo $BASH_VERSION
 5.2.15(1)-release
 ```
 <!-- keep the format -->
-## Create for your own project a new project folder in the console(terminal ,bash shell), e.g. in your own home folder, and open it as a new project inside your program used - in my case MS VSCode / MS VSCodium
+## Create for your own project a new project folder in the console(terminal, bash shell),  e.g. in your own home folder,  and open it as a new project inside your program used - in my case MS VSCode / MS VSCodium
 <!-- To comply with the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 project_name="new_project"
@@ -95,27 +94,29 @@ touch README.md \
 && rustup toolchain uninstall stable \
 && rustup toolchain install stable \
 && rustup update  --force \
-&& rustup show \
-&& mkdir tests
+&& mkdir tests \
+&& rustup override set stable \
+&& rustup show |sed -n '/active toolchain/,/^$/p'
 ```
 <!-- keep the format -->
 >[!TIP]
 >Show all installed component with version
->
+>**cargo install --list**
 <!-- keep the format -->
 >[!TIP]
 >Show and delete all installed package [![alt text][1]]( https://stackoverflow.com/questions/12137431/test-if-a-command-outputs-an-empty-string)
 <!-- keep the format -->
-```bash <!-- markdownlint-disable-line code-block-style -->
-# list all installed crates and write to file with complete command fo uninstall
+## List all installed crates and write to file with complete command fo uninstall
+<!-- keep the format -->
 if [[ $(cargo install --list| head | wc -c) -gt 0 ]]; then
 cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " |tee /tmp/uninstall.txt
 else
 echo "NO rust package SYSTEM WIDE installed"
 fi
-# cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
-# cargo install --list
-```
+<!-- keep the format -->
+<!-- cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall " -->
+<!-- keep the format -->
+## cargo install --list
 <!-- keep the format -->
 ## Install necessary package - Followed this tutorial from web page [![alt text][1]](https://markaicode.com/profiling-applications-2025/)
 <!-- keep the format -->
@@ -123,13 +124,10 @@ fi
 # Install perf (on Ubuntu/Debian)
 sudo apt-get install linux-tools-common linux-tools-generic
 <!-- -->
-# [x]: 
+FIXME! For what
 sudo apt install usbip
-# [x]:
 sudo apt install hwdata
-# [x]: 
 sudo apt install usbutils
-# [x]:
 cargo install flamegraph
 ```
 <!-- keep the format -->
@@ -153,7 +151,9 @@ sudo apt install linux-perf
 - 3: perf_event_paranoid setting is 3
 <!-- -->
 - Command to set the prof setting
-sudo sysctl kernel.perf_event_paranoid=0
+**sudo sysctl kernel.perf_event_paranoid=0**
+- Command to show which level is set -- reboot necessary
+**sudo sysctl kernel.perf_event_paranoid**
 <!-- keep the format -->
 >[TIP!]
 >How can I set the grep after context to be "until the next blank line"? [![alt text][1]](https://stackoverflow.com/questions/13534306/how-can-i-set-the-grep-after-context-to-be-until-the-next-blank-line)
@@ -326,7 +326,7 @@ rustup override set stable
 ```
 <!-- keep the format -->
 >[NOTE:]
-> 
+>
 FIXME: rustup -v  2>&1 | grep show better command description
 <!-- keep the format -->
 ## rust toolchain - which is active
